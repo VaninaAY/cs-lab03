@@ -1,12 +1,17 @@
 # depslib dependency file v1.0
-1619699333 source:c:\поняс\lab03\lab03\main.cpp
+1619724550 source:c:\поняс\lab03\lab03\main.cpp
 	<iostream>
 	<vector>
 	"histogram.h"
+	"svg.h"
 
 1619692773 c:\поняс\lab03\lab03\histogram.h
 	<vector>
 
 1619703492 source:c:\поняс\lab03\lab03\histogram.cpp
 	"histogram.h"
+
+1619724550 c:\поняс\lab03\lab03\svg.h
+	<vector>
+	<iostream>
 
