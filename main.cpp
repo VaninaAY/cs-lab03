@@ -84,6 +84,14 @@ int main()
     cerr << "Enter column count: ";
     cin >> bin_count;
 
+    string stroke;
+    cerr << "Enter line color ";
+    cin >> stroke;
+
+    string fill;
+    cerr << "Enter fill color: ";
+    cin >> fill;
+
     // Обработка данных
     // поиск min и max
     double min, max;
@@ -94,7 +102,7 @@ int main()
 
     // Вывод данных
     // отображение гистограммы
-    show_histogram_svg(bins);
+    show_histogram_svg(bins,stroke,fill);
 
     return 0;
 }
