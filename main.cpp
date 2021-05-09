@@ -5,6 +5,7 @@ using namespace std;
 
 #include "histogram.h"
 #include "svg.h"
+#include "check.h"
 
 const size_t SCREEN_WIDTH = 80;
 const size_t MAX_ASTERISK = SCREEN_WIDTH - 4 - 1;
@@ -85,12 +86,20 @@ int main()
     cin >> bin_count;
 
     string stroke;
-    cerr << "Enter line color ";
+    cerr << "Enter stroke color (black, red, blue, green or yellow): ";
     cin >> stroke;
 
     string fill;
-    cerr << "Enter fill color: ";
+    cerr << "Enter fill color (black, red, blue,green or yellow): ";
     cin >> fill;
+
+
+    if(check_color(stroke))
+        return 1;
+
+    if(check_color(fill))
+        return 1;
+
 
     // Обработка данных
     // поиск min и max
