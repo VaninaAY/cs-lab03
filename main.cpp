@@ -7,10 +7,6 @@ using namespace std;
 #include "svg.h"
 #include "check.h"
 
-struct Input {
-    vector<double> numbers;
-    size_t bin_count;
-};
 
 vector<double> input_numbers(size_t count)
 {
@@ -53,7 +49,7 @@ int main()
     input = read_input(cin);
 
     // расчет количества чисел в столбцах гистограммы
-    const auto bins = make_histogram(input.numbers, input.bin_count);
+    const auto bins = make_histogram(input);
 
     // Вывод данных
     // отображение гистограммы
