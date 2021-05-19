@@ -17,6 +17,14 @@ vector<double> input_numbers(size_t count)
     return result;
 }
 
+vector<double>
+input_numbers(istream& in, size_t count) {
+    vector<double> result(count);
+    for (size_t i = 0; i < count; i++) {
+        in >> result[i];
+    }
+    return result;
+}
 
 int main()
 {
@@ -26,7 +34,7 @@ int main()
     cin >> number_count;
 
     cerr << "Enter numbers: ";
-    const auto numbers = input_numbers(number_count); //функция ввовда чисел
+    const auto numbers = input_numbers(cin,number_count); //функция ввовда чисел
 
     size_t bin_count;
     cerr << "Enter column count: ";
