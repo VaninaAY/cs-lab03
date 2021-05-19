@@ -27,17 +27,23 @@ input_numbers(istream& in, size_t count) {
 }
 
 Input
-read_input(istream& in) {
+read_input(istream& in, bool promt) {
     Input data;
 
+    if(promt)
     cerr << "Enter number count: ";
+
     size_t number_count;
     in >> number_count;
 
+    if(promt)
     cerr << "Enter numbers: ";
+
     data.numbers = input_numbers(in, number_count);
 
+    if(promt)
     cerr << "Enter column count: ";
+
     in >> data.bin_count;
 
     return data;
@@ -45,8 +51,8 @@ read_input(istream& in) {
 
 int main()
 {
-    Input input;
-    input = read_input(cin);
+
+    const auto input = read_input(cin, true);
 
     // расчет количества чисел в столбцах гистограммы
     const auto bins = make_histogram(input);
