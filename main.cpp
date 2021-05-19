@@ -32,21 +32,6 @@ int main()
     cerr << "Enter column count: ";
     cin >> bin_count;
 
-    string stroke;
-    cerr << "Enter stroke color (black, red, blue, green or yellow): ";
-    cin >> stroke;
-
-    string fill;
-    cerr << "Enter fill color (black, red, blue,green or yellow): ";
-    cin >> fill;
-
-
-    if(check_color(stroke))
-        return 1;
-
-    if(check_color(fill))
-        return 1;
-
 
     // Обработка данных
     // поиск min и max
@@ -58,7 +43,7 @@ int main()
 
     // Вывод данных
     // отображение гистограммы
-    show_histogram_svg(bins,stroke,fill);
+    show_histogram_svg(bins);
 
     return 0;
 }
