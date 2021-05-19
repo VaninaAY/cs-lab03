@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <curl/curl.h>
 
 using namespace std;
 
@@ -51,7 +52,7 @@ read_input(istream& in, bool promt) {
 
 int main()
 {
-
+    curl_global_init(CURL_GLOBAL_ALL);
     const auto input = read_input(cin, true);
 
     // расчет количества чисел в столбцах гистограммы
