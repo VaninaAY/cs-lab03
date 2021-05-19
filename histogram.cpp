@@ -24,8 +24,10 @@ void find_minmax(const vector<double>& numbers, double& min, double& max)
     }
 }
 
-vector<size_t> make_histogram(const vector<double>& numbers, size_t min, size_t max, size_t& bin_count)
+vector<size_t> make_histogram(const vector<double>& numbers, size_t& bin_count)
 {
+    double min, max;
+    find_minmax(numbers, min, max);
     vector<size_t> result(bin_count);
     for (double number : numbers) {
         size_t bin = (size_t)((number - min) / (max - min) * bin_count);
