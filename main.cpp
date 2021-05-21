@@ -83,6 +83,18 @@ download(const string& address) {
             cout <<  curl_easy_strerror(res);
             exit(1);
         }
+
+        else
+        {
+            curl_off_t dl;
+            res = curl_easy_getinfo (curl, CURLINFO_SIZE_DOWNLOAD_T, & dl);
+
+            if (! res)
+            {
+                cout << "the size of the file uploaded over the network: " << dl << " bytes" << "\n";
+            }
+
+        }
     }
 
     return read_input(buffer, false);
