@@ -31,8 +31,14 @@ int main()
         DWORD version_major = version & mask_2;
         DWORD version_minor = version >> 8;
         DWORD build = platform;
-        printf("Windows v%u.%u (build %u)", version_major, version_minor, build);
+        printf("Windows v%u.%u (build %u)\n", version_major, version_minor, build);
     }
+
+    DWORD size = MAX_COMPUTERNAME_LENGTH+1;
+    char computer_name[size];
+    GetComputerNameA(computer_name, &size);
+    printf("Computer name: %s\n", computer_name);
+
     return 0;
 
    /* // ¬вод данных
