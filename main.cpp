@@ -21,8 +21,10 @@ vector<double> input_numbers(size_t count)
 
 int main()
 {
-    printf("Windows (decimal) version is %u.\n", GetVersion());
-    printf("Windows (16x) version is %x.\n", GetVersion());
+    DWORD info = GetVersion();
+    DWORD mask = 0b00000000'00000000'11111111'11111111;
+    DWORD version = info & mask;
+    printf("Windows version is %08x.\n", version);
     return 0;
 
    /* // ¬вод данных
