@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <windows.h>
 
 using namespace std;
 
@@ -20,7 +21,11 @@ vector<double> input_numbers(size_t count)
 
 int main()
 {
-    // Ввод данных
+    printf("Windows (decimal) version is %u.\n", GetVersion());
+    printf("Windows (16x) version is %x.\n", GetVersion());
+    return 0;
+
+   /* // Ввод данных
     size_t number_count;
     cerr << "Enter number count: ";
     cin >> number_count;
@@ -59,6 +64,6 @@ int main()
     // Вывод данных
     // отображение гистограммы
     show_histogram_svg(bins,stroke,fill);
-
+*/
     return 0;
 }
