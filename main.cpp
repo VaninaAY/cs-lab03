@@ -21,27 +21,9 @@ vector<double> input_numbers(size_t count)
 
 int main()
 {
-    DWORD info = GetVersion();
-    DWORD mask = 0x0000ffff;
-    DWORD mask_2 = 0x000000ff;
-    DWORD platform = info >> 16;
-    DWORD version = info & mask;
-    if ((info & 0x80000000) == 0)
-    {
-        DWORD version_major = version & mask_2;
-        DWORD version_minor = version >> 8;
-        DWORD build = platform;
-        printf("Windows v%u.%u (build %u)\n", version_major, version_minor, build);
-    }
 
-    DWORD size = MAX_COMPUTERNAME_LENGTH+1;
-    char computer_name[size];
-    GetComputerNameA(computer_name, &size);
-    printf("Computer name: %s\n", computer_name);
 
-    return 0;
-
-   /* // Ввод данных
+   // Ввод данных
     size_t number_count;
     cerr << "Enter number count: ";
     cin >> number_count;
@@ -80,6 +62,6 @@ int main()
     // Вывод данных
     // отображение гистограммы
     show_histogram_svg(bins,stroke,fill);
-*/
+
     return 0;
 }
