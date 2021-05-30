@@ -11,6 +11,8 @@ const size_t MAX_ASTERISK = SCREEN_WIDTH - 4 - 1;
 struct Input {
     vector<double> numbers;
     size_t bin_count;
+    string stroke;
+    string fill;
 };
 
 void find_minmax(const vector<double>& numbers, double& min, double& max);
