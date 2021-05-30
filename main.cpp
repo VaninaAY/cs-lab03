@@ -91,7 +91,7 @@ download(const string& address) {
 
             if (! res)
             {
-                cout << "the size of the file uploaded over the network: " << dl << " bytes" << "\n";
+                cerr << "the size of the file uploaded over the network: " << dl << " bytes" << "\n";
             }
 
         }
