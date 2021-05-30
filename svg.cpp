@@ -26,9 +26,34 @@ void svg_rect(double x, double y, double width, double height, string stroke, st
     cout << "<rect x='"<< x <<"' y='"<< y <<"' width='"<< width <<"' height='"<< height <<"' stroke='"<<stroke<<"' fill='"<< fill<<"'/>";
 }
 
+string
+make_info_text() {
+    stringstream buffer;
+
+    DWORD info = GetVersion();
+    DWORD mask = 0x0000ffff;
+    DWORD mask_2 = 0x000000ff;
+    DWORD platform = info >> 16;
+    DWORD version = info & mask;
+    if ((info & 0x80000000) == 0)
+    {
+        DWORD version_major = version & mask_2;
+        DWORD version_minor = version >> 8;
+        DWORD build = platform;
+         buffer << "Windows v" << version_major << "." << version_minor << " (build " << build << ") \n ";
+    }
+
+    DWORD size = MAX_COMPUTERNAME_LENGTH+1;
+    char computer_name[size];
+    GetComputerNameA(computer_name, &size);
+    buffer << "Computer name: " << computer_name;
+
+    return buffer.str();
+}
+
 void show_histogram_svg(const vector<size_t>& bins)
 {
-    const auto IMAGE_WIDTH = 400;
+    const auto IMAGE_WIDTH = 500;
     const auto IMAGE_HEIGHT = 300;
     const auto TEXT_LEFT = 20;
     const auto TEXT_BASELINE = 20;
@@ -77,6 +102,9 @@ void show_histogram_svg(const vector<size_t>& bins)
             }
 
         }
+
+
+    svg_text(0, top + TEXT_BASELINE, make_info_text());
 
     svg_end();
 }

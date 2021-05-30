@@ -31,6 +31,8 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="../check.cpp" />
+		<Unit filename="../check.h" />
 		<Unit filename="../histogram.cpp" />
 		<Unit filename="../histogram.h" />
 		<Unit filename="test.cpp" />

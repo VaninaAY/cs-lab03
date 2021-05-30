@@ -1,8 +1,12 @@
 #include <iostream>
 #include <vector>
+
 #include <curl/curl.h>
 #include <sstream>
 #include <string>
+//=======
+#include <windows.h>
+//>>>>>>> lab04-2
 
 using namespace std;
 
@@ -33,7 +37,6 @@ Input
 read_input(istream& in, bool promt) {
     Input data;
 
-    if(promt)
     cerr << "Enter number count: ";
 
     size_t number_count;
@@ -46,6 +49,7 @@ read_input(istream& in, bool promt) {
 
     if(promt)
     cerr << "Enter column count: ";
+
 
     in >> data.bin_count;
 

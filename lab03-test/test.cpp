@@ -56,7 +56,7 @@ void test_color_2()
 {
     string stroke("pink");
     bool result = check_color(stroke);
-    assert(result == true);
+    assert(result == false);
 }
 
 

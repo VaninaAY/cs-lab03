@@ -1,11 +1,26 @@
 # depslib dependency file v1.0
-1619698880 source:c:\поняс\lab03\lab03\histogram.cpp
+1619703492 source:c:\поняс\lab03\lab03\histogram.cpp
 	"histogram.h"
 
-1619692773 c:\поняс\lab03\lab03\histogram.h
+1621070664 c:\поняс\lab03\lab03\histogram.h
 	<vector>
 
-1619698113 source:c:\поняс\lab03\lab03\lab03-test\test.cpp
+1620406112 source:c:\поняс\lab03\lab03\lab03-test\test.cpp
 	"../histogram.h"
+	"../check.h"
 	<cassert>
+
+1619789771 source:c:\поняс\lab03\lab03\svg.cpp
+	"svg.h"
+
+1619789771 c:\поняс\lab03\lab03\svg.h
+	<vector>
+	<iostream>
+
+1620405904 source:c:\поняс\lab03\lab03\check.cpp
+	"check.h"
+
+1620376539 c:\поняс\lab03\lab03\check.h
+	<vector>
+	<iostream>
 
