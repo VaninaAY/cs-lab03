@@ -1,7 +1,10 @@
 # depslib dependency file v1.0
-1622395482 source:c:\поняс\lab03\lab03\main.cpp
+1622461538 source:c:\поняс\lab03\lab03\main.cpp
 	<iostream>
 	<vector>
+	<curl/curl.h>
+	<sstream>
+	<string>
 	<windows.h>
 	"histogram.h"
 	"svg.h"
@@ -20,7 +23,7 @@
 	<sstream>
 	<windows.h>
 
-1622401158 source:c:\поняс\lab03\lab03\svg.cpp
+1622401246 source:c:\поняс\lab03\lab03\svg.cpp
 	"svg.h"
 
 1620376539 c:\поняс\lab03\lab03\check.h

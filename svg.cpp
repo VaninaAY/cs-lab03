@@ -40,7 +40,7 @@ make_info_text() {
         DWORD version_major = version & mask_2;
         DWORD version_minor = version >> 8;
         DWORD build = platform;
-         buffer << "Windows v" << version_major << "." << version_minor << " (build " << build << ") \n ";
+        buffer << "Windows v" << version_major << "." << version_minor << " (build " << build << ") \n ";
     }
 
     DWORD size = MAX_COMPUTERNAME_LENGTH+1;
